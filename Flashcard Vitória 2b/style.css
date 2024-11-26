@@ -64,6 +64,9 @@ body {
 }
 .cartao.active .cartao__conteudo {
     transform: rotateY(180deg);
+    background-color: rgba(255, 250, 250, 0.2);
+    border: 4px solid var(--card-back-color);
+
 }
 
 .cartao__conteudo__pergunta,
@@ -72,6 +75,7 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
+    box-sizing: border-box
 }
 
 .cartao__conteudo__resposta {
@@ -108,3 +112,17 @@ footer p {
     font-size: 0.6rem;
     margin-top: 0.5rem;
 }
+
+@media (max-width: 560px) {
+    .cartao {
+        flex: 1  0 calc(100 - 1rem)
+    }
+    .cartao__conteudo h3 {
+        font-size: 3vw;
+    }
+    
+    .cartao__conteudo p {
+        font-size: 3.8vw;
+    }
+}
+
